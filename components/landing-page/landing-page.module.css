@@ -1,0 +1,44 @@
+.main {
+    background-color:#0A0332;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    /* display: grid; */
+    /* background-color: red; */
+}
+
+.contentTop {
+    margin-top: 10rem;
+}
+
+.justifiedContentRight {
+    justify-content: right;
+}
+
+.justifiedContentLeft {
+    justify-content: left;
+}
+
+.justifiedContentCenter {
+    justify-content: center;
+}
+
+.imageDimension {
+    width: 200px;
+    height: 600px;
+}
+
+.loginCard {
+    min-height: 50vh;
+    background-color: saddlebrown;
+}
+
+.animateBounce {
+    margin-top: 4rem;
+    align-items: center;
+    justify-content: center;
+}

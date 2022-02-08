@@ -1,0 +1,44 @@
+.main {
+    background-color: #000000;
+    min-height: 8vh;
+    display: grid;
+    align-items: center;
+}
+
+.pipe {
+    padding-left: 2rem;
+}
+
+.pipeContent {
+    min-height: 6rem;
+    font-style: normal;
+}
+
+.leftContent {
+    margin-left: 4rem;
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bolder;
+    font-family: fantasy -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.rightContent {
+    margin-right: 4rem;
+}
+
+.rightContent>div {
+    padding-left: 4rem;
+}
+
+.text {
+    
+}
+
+.prefix {
+    color: #5ADC8E;
+}
+
+.suffix {
+    color: #ECF4E6;
+}

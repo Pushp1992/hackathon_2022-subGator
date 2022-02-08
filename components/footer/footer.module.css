@@ -1,0 +1,25 @@
+.main {
+    background-color: #000000;
+    min-height: 60vh;
+    /* display: grid; */
+    /* align-items: center; */
+}
+
+.header {
+    margin-top: 3rem;
+    font-size: x-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.spanText {
+    color: gray;
+}
+
+.marginTop {
+    margin-top: 20rem;
+}
+
+.lineMargin {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
