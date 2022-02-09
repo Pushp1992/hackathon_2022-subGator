@@ -42,7 +42,7 @@ const Footer = () => {
 
                 <div className={styles.lineMargin}><hr /></div>
 
-                <div class="grid grid-rows-2 grid-flow-col gap-4">
+                <div className="grid grid-rows-2 grid-flow-col gap-4">
                     <div><span className={styles.spanText}>News</span> </div>
                     <div><span className={styles.spanText}>News</span></div>
                     <div><span className={styles.spanText}>Books &amp; Culture </span></div>
