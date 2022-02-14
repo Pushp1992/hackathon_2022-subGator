@@ -1,5 +1,6 @@
 const React = require('react');
 const classNames = require('classnames');
+const UserLogout = require('../logout');
 
 const styles = require('./header.module.css');
 
@@ -22,6 +23,9 @@ const Header = () => {
                         <div>Products</div>
                         <div>Shop</div>
                         <div>Login</div>
+                        <div>
+                            <UserLogout />
+                        </div>
                     </div>
                 </div>
             </div>

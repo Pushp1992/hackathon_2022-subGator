@@ -1,3 +1,3 @@
-const LoginCard = require('./login');
+const { auth, firebase } = require('./login');
 
-module.exports = LoginCard;
+module.exports = { auth, firebase };

@@ -1,6 +1,6 @@
 const React = require('react');
 const classNames = require('classnames');
-const Logincard = require('../login');
+import Login from '../login/loginTemplate';
 const Header = require('../header');
 const Footer = require('../footer/footer');
 // const Image = require('next/image');
@@ -21,7 +21,7 @@ const LandingPage = () => {
 
                 <div className={classNames("grid", styles.justifiedContentRight, styles.contentTop)}>
                     <div className={classNames(styles.loginCard)}>
-                        <Logincard />
+                        <Login />
                     </div>
                 </div>
 
