@@ -1,6 +1,19 @@
 .main {
     color: white;
-    background-color: #5c4bb9;
+    background-color: #0A0332;
     min-height: 100vh;
 }
 
+.container {
+    margin-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    /* display: grid; */
+    /* background-color: red; */
+}
+
+.primaryContainer {
+    min-height: 50vh;
+}
+
+.secondaryContainer {}

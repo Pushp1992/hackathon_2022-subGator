@@ -1,0 +1,31 @@
+.root {
+    width: 500;
+    background-color: black;
+}
+
+.cardroot {
+    display: flex;
+    margin: 10px;
+    justify-content: left;
+}
+
+.details {
+    display: flex;
+    flex-direction: column
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.cover {
+    width: 151,
+}
+
+.cardmargin {
+    margin: 20px;
+}
+
+
+/* card-list-styles goes below */
+
