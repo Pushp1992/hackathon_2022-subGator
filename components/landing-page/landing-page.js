@@ -48,8 +48,8 @@ const LandingPage = () => {
                 <div className={classNames("grid grid-rows-3 grid-flow-col gap-4", styles.contentTop)}>
                     <div className="col-span-2 ...">
                         <p className="text-justify">
-                            <span id={styles.content1}>Manage your Subscriptions</span>
-                            <span id="content2">with Just a single Tap</span>
+                            <span id={styles.content1}>Tracking your Subscriptions</span>
+                            <span id="content2">now became easier</span>
                         </p>
                     </div>
                     <div className="row-span-2 col-span-2 ...">
@@ -70,8 +70,8 @@ const LandingPage = () => {
                     </div>
                     <div className="col-span-2 ...">
                         <p className="text-justify">
-                            <span id={styles.content1}>Manage your Subscriptions</span>
-                            <span id="content2">with Just a single Tap</span>
+                            <span id={styles.content1}>Controlling your Subscriptions</span>
+                            <span id="content2">re-newal and expiry</span>
                         </p>
                     </div>
                     <div className="row-span-2 col-span-2 ...">
@@ -86,8 +86,8 @@ const LandingPage = () => {
                 <div className={classNames("grid grid-rows-3 grid-flow-col gap-4", styles.contentTop)}>
                     <div className="col-span-2 ...">
                         <p className="text-justify">
-                            <span id={styles.content1}>Manage your Subscriptions</span>
-                            <span id="content2">with Just a single Tap</span>
+                            <span id={styles.content1}>Custom &amp; scheduled notification</span>
+                            <span id="content2">for your subscription</span>
                         </p>
                     </div>
                     <div className="row-span-2 col-span-2 ...">
@@ -108,8 +108,8 @@ const LandingPage = () => {
                     </div>
                     <div className="col-span-2 ...">
                         <p className="text-justify">
-                            <span id={styles.content1}>Manage your Subscriptions</span>
-                            <span id="content2">with Just a single Tap</span>
+                            <span id={styles.content1}>Split your Subscriptions</span>
+                            <span id="content2">among your buddies</span>
                         </p>
                     </div>
                     <div className="row-span-2 col-span-2 ...">

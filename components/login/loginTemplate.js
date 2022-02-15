@@ -3,12 +3,15 @@ import classNames from 'classnames';
 import Router from 'next/router'
 import { auth, firebase } from '../login';
 
+import 'firebase/auth';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+
 const styles = {
     loginCard: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 50,    
+        padding: 50,
     },
     parent: {
         maxWidth: 545,
@@ -31,45 +34,52 @@ export default class Login extends Component {
                 this.setState({ status: 'SIGNED_IN' })
                 Router.push('/home')
             } else {
-                // Router.push('/')
                 Router.push('/')
             }
         })
     }
 
-    handleSignIn = () => {
-        var provider = new firebase.auth.GoogleAuthProvider()
-        provider.addScope('https://www.googleapis.com/auth/contacts.readonly')
+    uiConfig = {
+        // var provider = new firebase.auth.GoogleAuthProvider()
+        // provider.addScope('https://www.googleapis.com/auth/contacts.readonly')
 
-        auth.signInOptions = [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
+        signInFlow: 'popup',
+        signInOptions: [
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            {
+                provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+                recaptchaParameters: {
+                    type: 'image', // 'audio'
+                    size: 'normal', // 'invisible' or 'compact'
+                    badge: 'bottomleft', //' bottomright' or 'inline' applies to invisible.
+                    defaultCountry: 'GB',
+                    loginHint: '+11234567890'
+                },
+            }
+        ],
 
-            auth.signInWithPopup(provider)
-                .then(() => {
-                    console.log('you are signed in successfully')
-                    Router.push('/home')
-                })
-                .catch(err => {
-                    console.log(err, ' Something right not happened !')
-                    Router.push('/')
-                })
-    }
+        // callbacks: {
+        //     signIn
+        // },
+        signInSuccessUrl: '/home'
+
+            // auth.signInWithPopup(provider)
+            //     .then(() => {
+            //         console.log('you are signed in successfully')
+            //         Router.push('/home')
+            //     })
+            //     .catch(err => {
+            //         console.log(err, ' Something right not happened !')
+            //         Router.push('/')
+            //     })
+    };
+
     render() {
+        // ui.start('#firebaseui-auth-container', this.handleSignIn);
         return (
             <div id='loginCard' style={styles.loginCard}>
-                {/* <Card style={styles.parent}>
-                    <CardActionArea>
-                        <CardMedia component="img" alt="previewImg"  image='/images/swiggy-banner.png' />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
-                                <span style={styles.textcol}>Badges Dashboard</span>
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <button  className={classNames("rounded-full ...", styles.button)} onClick={this.handleSignIn}>Google SignIn</button>
-                    </CardActions>
-                </Card> */}
-                   <button  className={classNames("rounded-full ...", styles.button)} onClick={this.handleSignIn}>Google SignIn</button>
+                {/* <button  className={classNames("rounded-full ...", styles.button)} onClick={this.handleSignIn}>Google SignIn</button> */}
+                <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
             </div>
         )
     }

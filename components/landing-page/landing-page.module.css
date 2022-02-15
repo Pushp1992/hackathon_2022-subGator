@@ -34,8 +34,9 @@
 }
 
 .loginCard {
-    min-height: 50vh;
-    background-color: saddlebrown;
+    min-width: 40vh;
+    min-height: 40vh;
+    background-color:#0f1740;
 }
 
 .animateBounce {

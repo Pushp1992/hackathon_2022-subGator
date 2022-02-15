@@ -21,3 +21,14 @@ a {
   /* added this for width below 600px */
   min-width: fit-content;
 }
+
+p {
+  color: aqua;
+  font-size: xx-large;
+  font-family: fantasy;
+}
+
+ul {
+  color: blanchedalmond;
+  font-size: larger;
+}
