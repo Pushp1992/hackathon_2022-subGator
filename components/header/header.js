@@ -2,10 +2,13 @@ const React = require('react');
 const classNames = require('classnames');
 const UserLogout = require('../logout');
 
+const { auth, firebase } = require('../login');
+
 const styles = require('./header.module.css');
 
 
 const Header = () => {
+    console.log('currentuser', auth.currentUser)
     return (
         <div className={classNames("md:fluid md:mx-auto", styles.main)}>
             <div className="flex justify-between ...">
@@ -22,10 +25,13 @@ const Header = () => {
                     <div className={classNames("flex justify-end ...", styles.rightContent)}>
                         <div>Products</div>
                         <div>Shop</div>
-                        <div>Login</div>
-                        <div>
-                            <UserLogout />
-                        </div>
+                        {
+                            auth.currentUser === null ?
+                                <div>Login</div> :
+                                <div>
+                                    <UserLogout />
+                                </div>
+                        }
                     </div>
                 </div>
             </div>
